@@ -22,7 +22,9 @@ Dot.propTypes = {
   y: PropTypes.number,
   radius: PropTypes.number,
   dotStyles: PropTypes.object,
-  dotColor: PropTypes.string
+  dotColor: PropTypes.string,
+  dotColor1: PropTypes.string,
+  dotColor2: PropTypes.string,
 };
 
 export default Dot;
