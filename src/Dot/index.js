@@ -14,7 +14,7 @@ const getStyles = ({ x, y, radius, dotColor }) => ({
 });
 
 const Dot = (props) => (
-  <View style={[styles.container, props.dotStyles, props.dotStyles1, props.dotStyles2, getStyles(props)]} />
+  <View style={[styles.container, props.dotStyles, getStyles(props)]} />
 );
 
 Dot.propTypes = {
@@ -22,11 +22,7 @@ Dot.propTypes = {
   y: PropTypes.number,
   radius: PropTypes.number,
   dotStyles: PropTypes.object,
-  dotStyles1: PropTypes.object,
-  dotStyles2: PropTypes.object,
   dotColor: PropTypes.string,
-  dotColor1: PropTypes.string,
-  dotColor2: PropTypes.string,
 };
 
 export default Dot;
