@@ -35,9 +35,9 @@ class TypingAnimation extends React.Component {
 
     return (
       <View style={[styles.container, style]}>
-        <Dot x={dotX - dotRadius - dotMargin} y={this.state.y1} radius={dotRadius} style={dotStyles} dotColor={dotColor} />
-        <Dot x={dotX} y={this.state.y2} radius={dotRadius} style={dotStyles1} dotColor={dotColor1} />
-        <Dot x={dotX + dotRadius + dotMargin} y={this.state.y3} radius={dotRadius} style={dotStyles2} dotColor={dotColor2} />
+        <Dot x={dotX - dotRadius - dotMargin} y={this.state.y1} radius={dotRadius} dotStyles={dotStyles} dotColor={dotColor} />
+        <Dot x={dotX} y={this.state.y2} radius={dotRadius} dotStyles={dotStyles1} dotColor={dotColor1} />
+        <Dot x={dotX + dotRadius + dotMargin} y={this.state.y3} radius={dotRadius} dotStyles={dotStyles2} dotColor={dotColor2} />
       </View>
     );
   }
