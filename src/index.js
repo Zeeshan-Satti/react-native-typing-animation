@@ -31,13 +31,13 @@ class TypingAnimation extends React.Component {
   }
 
   render() {
-    const { dotStyles, style, show, dotColor, dotMargin, dotRadius, dotX } = this.props;
-    if(!show) return null;
+    const { dotStyles, style, dotColor, dotColor1, dotColor2, dotMargin, dotRadius, dotX } = this.props;
+
     return (
       <View style={[styles.container, style]}>
         <Dot x={dotX - dotRadius - dotMargin} y={this.state.y1} radius={dotRadius} style={dotStyles} dotColor={dotColor} />
-        <Dot x={dotX} y={this.state.y2} radius={dotRadius} style={dotStyles} dotColor={dotColor} />
-        <Dot x={dotX + dotRadius + dotMargin} y={this.state.y3} radius={dotRadius} style={dotStyles} dotColor={dotColor} />
+        <Dot x={dotX} y={this.state.y2} radius={dotRadius} style={dotStyles} dotColor={dotColor1} />
+        <Dot x={dotX + dotRadius + dotMargin} y={this.state.y3} radius={dotRadius} style={dotStyles} dotColor={dotColor2} />
       </View>
     );
   }
@@ -47,10 +47,11 @@ TypingAnimation.defaultProps = {
   style: {},
   dotStyles: {},
   dotColor: "black",
+  dotColor1: "white",
+  dotColor2: "green",
   dotMargin: 3,
   dotAmplitude: 3,
   dotSpeed: 0.15,
-  show: true,
   dotRadius: 2.5,
   dotY: 6,
   dotX: 12
@@ -60,10 +61,11 @@ TypingAnimation.propTypes = {
   style: PropTypes.object,
   dotStyles: PropTypes.object,
   dotColor: PropTypes.string,
+  dotColor1: PropTypes.string,
+  dotColor2: PropTypes.string,
   dotMargin: PropTypes.number,
   dotAmplitude: PropTypes.number,
   dotSpeed: PropTypes.number,
-  show: PropTypes.bool,
   dotRadius: PropTypes.number,
   dotY: PropTypes.number,
   dotX: PropTypes.number
